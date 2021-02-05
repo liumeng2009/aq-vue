@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const WebpackBar = require('webpackbar');
 const vueConfig = {
-  publicPath: process.env.PUBLIC_PATH + '/',
+  publicPath: process.env.AQ_PUBLIC_PATH + '/',
 
   configureWebpack: {
     plugins: [new WebpackBar()]
