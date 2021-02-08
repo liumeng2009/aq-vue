@@ -1,8 +1,8 @@
 import store from '@/store';
 import { GetUserInfoByUserIdModel } from '@/api/sys/model/userModel';
 
-import { hotModuleUnregisterModule } from "@/utils/helper/vuexHelper";
-import { getModule, Module, Mutation, VuexModule } from "vuex-module-decorators";
+import { hotModuleUnregisterModule } from '@/utils/helper/vuexHelper';
+import { getModule, Module, Mutation, VuexModule } from 'vuex-module-decorators';
 
 function fixType<T>() {
   return {} as T;
@@ -10,7 +10,7 @@ function fixType<T>() {
 
 export type UserInfo = Omit<GetUserInfoByUserIdModel, 'roles'>;
 
-const NAME: string = 'user';
+const NAME = 'user';
 hotModuleUnregisterModule(NAME);
 @Module({ namespaced: true, name: NAME, dynamic: true, store })
 class User extends VuexModule {

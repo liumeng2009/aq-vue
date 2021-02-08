@@ -3,9 +3,8 @@ import store from '@/store';
 import { hotModuleUnregisterModule } from '@/utils/helper/vuexHelper';
 import { Action, getModule, Module, Mutation, VuexModule } from 'vuex-module-decorators';
 
-let timeId: TimeoutHandle;
-const NAME: string = 'app'
-hotModuleUnregisterModule(NAME)
+const NAME = 'app';
+hotModuleUnregisterModule(NAME);
 @Module({ dynamic: true, namespaced: true, store, name: NAME })
 class App extends VuexModule {
   private pageLoadingState = false;

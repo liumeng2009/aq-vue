@@ -1,6 +1,6 @@
 /**
- * 
- * @param {*} title :page title 
+ *
+ * @param {*} title :page title
  */
 function setDocumentTitle(title: string) {
   document.title = title;

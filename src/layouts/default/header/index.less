@@ -1,0 +1,40 @@
+@header-prefix-cls: ~'@{namespace}-layout-header';
+
+.@{header-prefix-cls} {
+  display:flex;
+  flex-direction: row-reverse;
+  height: @header-height;
+  line-height: @header-height;
+  background-color: @white;
+  background: url('~@/assets/images/layout/header-bg.png') no-repeat center top;
+
+  &.ant-layout-header {
+    padding-right: 0px;
+  }
+
+  &-action {
+    display: flex;
+    min-width: 370px;
+    padding-right: 12px;
+    align-items: center;
+    color: @primary-color;
+    flex-direction: row-reverse;
+    background: url('~@/assets/images/layout/header-r.png') no-repeat 10px -5px;
+
+    &__item {
+      height: @header-height + 10;
+      padding: 0 8px;
+      font-size: 1.2em;
+      cursor: pointer;
+
+      &.fullscreen-item {
+        margin-left: 10px;
+      }
+
+      span[role='img'] {
+        padding: 2px 2px;
+        border:@primary-color 1px solid;
+      }
+    }
+  }
+}

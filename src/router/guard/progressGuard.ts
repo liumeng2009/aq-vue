@@ -9,7 +9,7 @@ export function createProgressGuard(router: Router) {
   });
 
   router.afterEach(async () => {
-    nProgress.done()
+    nProgress.done();
     return true;
   });
 }

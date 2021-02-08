@@ -8,16 +8,16 @@ const BasicRoute: AppRouteRecordRaw[] = [
     name: 'Root',
     redirect: '/home',
     meta: {
-      title: 'Root'
-    }
+      title: 'Root',
+    },
   },
   {
     path: '/home',
     name: 'Home',
-    redirect: '/welcome',
+    redirect: '/home/welcome',
     component: LAYOUT,
     meta: {
-      title: '首页'
+      title: '首页',
     },
     children: [
       {
@@ -25,19 +25,19 @@ const BasicRoute: AppRouteRecordRaw[] = [
         name: 'Welcome',
         component: () => import('@/views/dashboard/welcome/index.vue'),
         meta: {
-          title: '首页'
-        }
-      }
-    ]
+          title: '首页',
+        },
+      },
+    ],
   },
   {
-    path: '/user',
+    path: '/login',
     name: 'Login',
-    component: () => import('@/views/user/login.vue'),
+    component: () => import('@/views/user/login/index.vue'),
     meta: {
-      title: '登录'
-    }
-  }
-]
+      title: '登录',
+    },
+  },
+];
 
 export { BasicRoute };

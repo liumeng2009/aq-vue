@@ -5,7 +5,7 @@ import { warn } from '@/utils/log';
 
 export function createMessageGuard(router: Router) {
   router.beforeEach(async () => {
-    try{
+    try {
       Modal.destroyAll();
       notification.destroy();
     } catch (error) {

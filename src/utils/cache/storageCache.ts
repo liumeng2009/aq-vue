@@ -1,8 +1,6 @@
-import { DEFAULT_CACHE_TIME } from "@/settings/encryptionSettings"
+import { DEFAULT_CACHE_TIME } from '@/settings/encryptionSettings';
 
-export const createStorage = (
-  storage: Storage = localStorage,
-) => {
+export const createStorage = (storage: Storage = localStorage) => {
   const WebStorage = class WebStorage {
     private storage: Storage;
     constructor() {
@@ -23,4 +21,4 @@ export const createStorage = (
     }
   };
   return new WebStorage();
-}
+};

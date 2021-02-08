@@ -11,7 +11,10 @@ export type CancelFn = () => void;
 
 export type DebounceAndThrottleProcedure<T extends unknown[]> = (...args: T) => unknown;
 
-export type DebounceAndThrottleProcedureResult<T extends unknown[]> = [DebounceAndThrottleProcedure<T>, CancelFn];
+export type DebounceAndThrottleProcedureResult<T extends unknown[]> = [
+  DebounceAndThrottleProcedure<T>,
+  CancelFn
+];
 
 import { isFuntion } from '@/utils/is';
 export function throttle<T extends unknown[]>(
