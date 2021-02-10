@@ -1,4 +1,4 @@
-const projectName = process.env.AQ_APP_TITLE;
+const projectName = process.env.VUE_APP_NAME;
 
 export function warn(message: string) {
   console.warn(`[${projectName} warn]:${message}`);

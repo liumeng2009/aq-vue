@@ -26,10 +26,6 @@
       text: propTypes.string,
       icon: propTypes.string,
     },
-    setup(props, ctx) {
-      console.log(props);
-      console.log(ctx);
-    },
   });
 </script>
 

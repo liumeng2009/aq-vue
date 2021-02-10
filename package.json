@@ -10,6 +10,7 @@
   "dependencies": {
     "ant-design-vue": "^2.0.0-rc.9",
     "core-js": "^3.6.5",
+    "lodash-es": "^4.17.20",
     "nprogress": "^0.2.0",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
