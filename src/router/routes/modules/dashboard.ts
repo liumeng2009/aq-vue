@@ -25,6 +25,7 @@ const dashboard: AppRouteModule = {
       component: () => import('@/views/dashboard/analysis/index.vue'),
       meta: {
         title: '分析页',
+        ignoreKeepAlive: false,
       },
     },
   ],

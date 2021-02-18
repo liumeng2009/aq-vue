@@ -10,7 +10,6 @@ export const basicProps = {
   collapsedShowTitle: propTypes.bool,
   // 最好是4 倍数
   inlineIndent: propTypes.number.def(20),
-
   inlineCollapsed: propTypes.bool,
   mixSider: propTypes.bool,
 
@@ -27,9 +26,7 @@ export const itemProps = {
     default: {},
   },
   level: propTypes.number,
-  theme: propTypes.oneOf(['dark', 'light']),
   showTitle: propTypes.bool,
-  isHorizontal: propTypes.bool,
 };
 
 export const contentProps = {

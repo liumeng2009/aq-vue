@@ -3,7 +3,7 @@
     <h1>parent view</h1>
     <router-view>
       <template #default="{ Component, route }">
-        <keep-alive v-if="true" :include="getCaches">
+        <keep-alive v-if="route.meta.ignoreKeepAlive">
           <component :is="Component" v-bind="getKey(Component, route)" />
         </keep-alive>
         <component v-else :is="Component" v-bind="getKey(Component, route)" />
@@ -14,13 +14,12 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import { useCache, getKey } from './useCache';
+  import { getKey } from './useCache';
 
   export default defineComponent({
     name: 'PageLayout',
     setup() {
-      const { getCaches } = useCache(false);
-      return { getCaches, getKey };
+      return { getKey };
     },
   });
 </script>

@@ -1,31 +1,15 @@
 <template>
-  <Sider>
-    <Menu>
-      <MenuItem>
-        <span>nav 1</span>
-      </MenuItem>
-    </Menu>
-  </Sider>
+  <Sider />
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import { Layout, Menu } from 'ant-design-vue';
-  import { useDesign } from '@/hooks/web/useDesign';
+
+  import Sider from './LayoutSider.vue';
   export default defineComponent({
     name: 'LayoutSider',
     components: {
-      Sider: Layout.Sider,
-      Menu,
-      MenuItem: Menu.Item,
-    },
-    setup() {
-      const { prefixCls } = useDesign('layout-sidebar');
-
-      return {
-        prefixCls,
-      };
+      Sider,
     },
   });
 </script>
-<style lang="less"></style>
